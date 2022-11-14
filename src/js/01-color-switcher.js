@@ -6,7 +6,7 @@ startBtn.addEventListener('click', onStart);
 stopBtn.addEventListener('click', onStop);
 
 stopBtn.setAttribute('disabled', '');
-let timerId;
+let timerId = 0;
 
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
@@ -19,6 +19,7 @@ function onStart() {
   }, 1000);
   startBtn.setAttribute('disabled', '');
   stopBtn.removeAttribute('disabled');
+  console.log(timerId);
 }
 
 function onStop() {
