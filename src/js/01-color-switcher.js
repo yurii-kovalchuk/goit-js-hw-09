@@ -19,7 +19,6 @@ function onStart() {
   }, 1000);
   startBtn.setAttribute('disabled', '');
   stopBtn.removeAttribute('disabled');
-  console.log(timerId);
 }
 
 function onStop() {
