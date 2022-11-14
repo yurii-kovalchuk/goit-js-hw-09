@@ -2,14 +2,15 @@ const startBtn = document.querySelector('[data-start]');
 const stopBtn = document.querySelector('[data-stop]');
 const body = document.querySelector('body');
 
-function getRandomHexColor() {
-  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-}
-
 startBtn.addEventListener('click', onStart);
 stopBtn.addEventListener('click', onStop);
 
 stopBtn.setAttribute('disabled', '');
+let timerId;
+
+function getRandomHexColor() {
+  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+}
 
 function onStart() {
   body.style.backgroundColor = getRandomHexColor();
