@@ -49,3 +49,9 @@ img {
   font-weight: bold;
   font-size: 28px;
 }
+
+.form {
+  display: flex;
+  /* flex-wrap: wrap; */
+  gap: 10px;
+}
