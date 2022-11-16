@@ -31,7 +31,8 @@ function onSubmit(e) {
     delay += Number(stepRef.value);
   }
 
-  e.currentTarget.reset();
+  // e.currentTarget.reset();
+  setTimeout(() => formRef.reset(), delay);
 }
 
 function onSuccess({ position, delay }) {
