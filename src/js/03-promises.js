@@ -30,6 +30,8 @@ function onSubmit(e) {
     createPromise(i, delay).then(onSuccess).catch(onError);
     delay += Number(stepRef.value);
   }
+
+  e.currentTarget.reset();
 }
 
 function onSuccess({ position, delay }) {
